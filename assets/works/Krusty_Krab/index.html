@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Krusty Krab</title>
+    <!-----------------------------------CSS LINK----------------------------------------------->
+    <link rel="stylesheet" href="./style.css">
+    <!--------------------------------BOOTSTRAP------------------------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <!------------------------------NAV BAR-------------------------->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+      
+          <!-- Left: Logo -->
+          <a class="navbar-brand" href="#">KrustyKrab</a>
+      
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Main content: Nav links + icons -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <!-- Center: Nav links -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#crew">Our Crew</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+      
+            <!-- Right: Icons -->
+            <div class="d-flex align-items-center gap-3 ms-auto">
+              <a href="#" class="icon"><i class="bi bi-cart3 fs-5"></i></a>
+              <a href="#" class="icon"><i class="bi bi-instagram fs-5"></i></a>
+              <a href="#" class="icon"><i class="bi bi-twitter fs-5"></i></a>
+            </div>
+          </div>
+      
+        </div>
+    </nav>
+      
+
+      <!------------------------------------HERO SECTION----------------------------------------->
+      <section id="#home">
+        <div class="container hero mt-5">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="text-container">
+                        <h6>The Original Burger</h6>
+                    </div>
+                    <h1 class="hero-header display-1">
+                        Flavorful & Tasty
+                    </h1>
+                    <p>Dive into the heart of Bikini Bottom and savor the finest Krabby Patties, crafted with our top-secret formulas and flavors that will take your taste buds on a sea-sational adventure! Fresh, delicious, and bursting with flavors — come hungry, leave with a full belly and a happy heart!</p>
+                    <div class="hero-buttons">
+                        <button class="btn-1">Explore Now</button>
+                        <button class="btn-2">See Menu <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <img src="./images/hambuger-removebg-preview.png" alt="hambuger" class="img-fluid hero-img">
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-----------------------------------------MENUS--------------------------------------->
+      <section id="menu" class="py-5 bg-light">
+        <div class="container text-center">
+          <h2 class="mb-4 fw-bold display-4 menu-title" data-aos="zoom-in">Our Menu</h2>
+      
+          <!-- Tabs -->
+          <ul class="nav nav-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="burgers-tab" data-bs-toggle="tab" data-bs-target="#burgers" type="button" role="tab">Burgers</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="sides-tab" data-bs-toggle="tab" data-bs-target="#sides" type="button" role="tab">Sides</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button" role="tab">Drinks</button>
+            </li>
+          </ul>
+      
+          <!-- Tab Content -->
+          <div class="tab-content" id="menuTabContent">
+            <!-- All -->
+            <div class="tab-pane fade show active" id="all" role="tabpanel">
+              <div class="row g-4">
+                <!-- Burger -->
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/hambuger.webp" class="card-img-top img-fluid" alt="Krabby Patty" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Krabby Patty</h5>
+                      <p class="card-text">The OG burger made with the secret Krabby formula.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Side -->
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/fries.jpg" class="card-img-top" alt="Sea Fries" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sea Fries</h5>
+                      <p class="card-text">Golden crispy fries from the depths of the deep fryer.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Drink -->
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/kelp_shake.jpeg" class="card-img-top" alt="Kelp Shake" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Kelp Shake</h5>
+                      <p class="card-text">Refreshing, bubbly and slightly mysterious.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Burgers Only -->
+            <div class="tab-pane fade" id="burgers" role="tabpanel">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/hambuger.webp" class="card-img-top img-fluid" alt="Krabby Patty" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Krabby Patty</h5>
+                      <p class="card-text">The OG burger made with the secret Krabby formula.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/volcano.jpg" class="card-img-top img-fluid" alt="Krabby Patty" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Volcano Burger</h5>
+                      <p class="card-text">Erupting with flavor! This fiery patty is stacked with spicy lava sauce, molten cheese, jalapeños, and a smoky kick that’ll make your taste buds rumble.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Sides Only -->
+            <div class="tab-pane fade" id="sides" role="tabpanel">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/fries.jpg" class="card-img-top" alt="Sea Fries" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Sea Fries</h5>
+                      <p class="card-text">Golden crispy fries from the depths of the deep fryer.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Drinks Only -->
+            <div class="tab-pane fade" id="drinks" role="tabpanel">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card h-100" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500">
+                    <img src="./images/kelp_shake.jpeg" class="card-img-top" alt="Kelp Shake" style="height: 400px; object-fit: cover;">
+                    <div class="card-body">
+                      <h5 class="card-title">Kelp Shake</h5>
+                      <p class="card-text">Refreshing, bubbly and slightly mysterious.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <!-- Left: Image -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1500">
+              <img src="./images/krusty_krab_2.jpeg" alt="Krusty Krab Interior" class="img-fluid rounded shadow">
+            </div>
+      
+            <!-- Right: Text -->
+            <div class="col-md-6" data-aos="fade-left" data-aos-duration="1500">
+              <h2 class="fw-bold mb-1 about-head">Krusty Krab</h2>
+              <p class="about-text">
+                Welcome to the Krusty Krab, the heart and soul of Bikini Bottom's fast food scene and the proud home of the world-famous Krabby Patty. From the moment you step inside our legendary underwater eatery, you're not just a customer — you're family. Born from humble beginnings inside an old lobster trap, the Krusty Krab has grown into a true icon, known across the ocean floor for its irresistible burgers, loyal crew, and unforgettable atmosphere. We believe in more than just filling stomachs — we believe in filling hearts. Every Krabby Patty that slides off the grill carries a little piece of the ocean's best: carefully stacked ingredients, toasted buns, melty cheese, crispy lettuce, and that mysteriously delicious patty that has baffled Plankton for years.
+              </p>
+              <!-- <p class="about-text">
+                But it's not just about what's on the plate — it's about who’s behind the counter. SpongeBob’s unstoppable joy, Squidward’s eternal sarcasm, and Mr. Krabs’ legendary obsession with quality (and a certain shiny coin or two) create the perfect recipe for a dining experience like no other. Our mission is simple: to make every meal magical. Whether you're a first-time customer or a long-time regular, you’re always welcome to dive into a sea of flavor, laughter, and nostalgia. At the Krusty Krab, we serve more than food — we serve tradition, built on trust, grilled with passion, and served with a splash of Bikini Bottom charm. Come hungry, leave happy — and remember, the secret formula isn’t just in the patty… it’s in everything we do.
+              </p> -->
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      <!--------------------------------------------------CREW------------------------------------------------->
+      <section id="crew" class="py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-5 display-4 crew-head" data-aos="fade-up" data-aos-duration="1500">Meet the Crew</h2>
+          <div class="row g-4">
+            <!-- SpongeBob -->
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500">
+              <div class="card h-100 text-center border-0 shadow-sm crew-card">
+                <img src="./images/spongebob.png" alt="SpongeBob" class="card-img-top rounded-top">
+                <div class="card-body">
+                  <h5 class="card-title">SpongeBob SquarePants</h5>
+                  <!-- <p class="card-text text-muted">Fry Cook Extraordinaire</p> -->
+                  <p class="crew-quote">“I'm ready! I'm ready!”</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Squidward -->
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1500">
+              <div class="card h-100 text-center border-0 shadow-sm crew-card">
+                <img src="./images/squidward-1-removebg-preview.png" alt="Squidward" class="card-img-top rounded-top">
+                <div class="card-body">
+                  <h5 class="card-title">Squidward Tentacles</h5>
+                  <!-- <p class="card-text text-muted">Grumpy Cashier</p> -->
+                  <p class="crew-quote">“I might as well sleep for the rest of my life.”</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Mr. Krabs -->
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1500">
+              <div class="card h-100 text-center border-0 shadow-sm crew-card">
+                <img src="./images/mr_krabs-1-removebg-preview.png" alt="Mr. Krabs" class="card-img-top rounded-top">
+                <div class="card-body">
+                  <h5 class="card-title">Mr. Krabs</h5>
+                  <!-- <p class="card-text text-muted">Money-Loving Manager</p> -->
+                  <p class="crew-quote">“I like money!”</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Plankton -->
+            <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
+              <div class="card h-100 text-center border-0 shadow-sm crew-card">
+                <img src="./images/plankton_m_01-removebg-preview.png" alt="Plankton" class="card-img-top rounded-top">
+                <div class="card-body">
+                  <h5 class="card-title">Plankton</h5>
+                  <!-- <p class="card-text text-muted">Villain Next Door</p> -->
+                  <p class="crew-quote">“I went to college!”</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-5 display-4 contact-head" data-aos="fade-up" data-aos-duration="1500">Get in Touch</h2>
+      
+          <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500">
+              <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>If you want to learn more, ask about our secret recipe, or just chat with SpongeBob, fill out the form below or use one of our communication channels:</p>
+      
+                <!-- Contact Info List -->
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-telephone-fill"></i> <span class="ms-2">+1 (234) 567-890</span></li>
+                  <li><i class="bi bi-envelope-fill"></i> <span class="ms-2">krustykrab@bikini.com</span></li>
+                  <li><i class="bi bi-geo-alt-fill"></i> <span class="ms-2">123 Bikini Bottom Ave</span></li>
+                </ul>
+              </div>
+            </div>
+      </section>
+      
+      
+      
+    <!--------------------------------BOOTSTRAP------------------------------------------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- AOS Animation Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

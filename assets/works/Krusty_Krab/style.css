@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }  
+nav{
+    z-index: 1000;
+    background-color: #fff;
+}
+.navbar .navbar-brand{
+    font-family: 'Pacifico', cursive;
+    color: #D97C44 !important;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.nav-item .nav-link{
+    color: black !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.nav-item .nav-link:hover{
+    color: #D97C44 !important;
+}
+
+.icon{
+    color: #fff !important;
+    background-color: #D97C44 !important;
+    border-radius: 50%;
+    padding: 5px 10px;
+    transition: 0.5s all;
+}
+.icon:hover{
+    transform: scale(1.1);
+    background-color: #d46119 !important;
+}
+.hero{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.hero .text-container{
+    display: inline-block;
+    background-color: 	#f9f9f9 !important;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.hero .text-container h6{
+    color: #D97C44;
+    font-weight: 800;
+}
+.hero-header{
+    font-family: 'Chewy', cursive;
+    font-weight: 700;
+}
+.hero p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.hero button{
+    padding: 10px 15px;
+}
+.hero .btn-1{
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #d15203;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.hero .btn-1:hover{
+    background-color: #db5400 !important;
+}
+.hero .btn-2{
+    color: #d15203;
+    font-weight: bold;
+    border: 1px solid #d15203;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.hero .btn-2:hover{
+    color: #fff !important;
+    font-weight: bold;
+    background-color: #d15203;
+    border: none;
+    border-radius: 5px;
+}
+.hero .btn-2:hover .bi-arrow-right{
+    color: #fff !important;
+}
+.hero button .bi-arrow-right{
+    color: #d15203;
+}
+/* Initial state of the image */
+.hero img {
+    opacity: 0; /* Start with the image invisible */
+    animation: fadeIn 3s ease-in-out forwards, floatEffect 6s ease-in-out infinite;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Floating animation */
+@keyframes floatEffect {
+    0% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    50% {
+        transform: translateY(-15px); /* Float upwards */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+/* Hero Text Fade-in */
+.hero-header, .text-container h6, .hero-buttons {
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.hero-header {
+    animation-delay: 0.3s;
+}
+
+.text-container h6 {
+    animation-delay: 0.5s;
+}
+
+.hero-buttons {
+    animation-delay: 0.7s;
+}
+
+/* Fade-in and slide-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+.menu-title{
+    font-family: 'Chewy', cursive;
+}
+.about-head{
+    font-family: 'Chewy', cursive;
+}
+.about-text{
+    line-height: 1.7;
+}
+
+.crew-head{
+    font-family: 'Chewy', cursive;
+}
+.crew-card img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+.crew-card:hover img {
+    transform: scale(1.05);
+}
+  
+.crew-quote {
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+}

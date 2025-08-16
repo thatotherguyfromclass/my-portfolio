@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRYD - Cart</title>
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        html, body{
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Cart Section */
+        .cart-section {
+            background: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+        }
+
+        .cart-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Cart Item */
+        .cart-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .cart-item-img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .item-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .item-price {
+            color: #555;
+        }
+
+        .quantity-controls .qty-btn {
+            background: linear-gradient(135deg, #3a2672 0%, #250956 35%, #190439 70%, #34195b 100%);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            line-height: 1;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s ease;
+            }
+
+        .quantity-controls .qty-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Summary Card */
+        .summary-card {
+            background: #fdfdfd;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .checkout-btn {
+            background: linear-gradient(135deg, #3a2672 0%, #250956 35%, #190439 70%, #34195b 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            color: #fff;
+            background: #190439;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <section class="cart-section py-5">
+            <div class="container">
+                <h2 class="mb-4 text-center cart-title">Your Cart</h2>
+                
+                <div class="row">
+                <!-- Cart Items -->
+                <div class="col-lg-8">
+                    <div class="cart-item d-flex align-items-center mb-4 p-3">
+                    <img src="./assets/images/women1.avif" alt="Sneaker" class="cart-item-img me-3">
+                    <div class="flex-grow-1">
+                        <h5 class="item-name">Luna Flow</h5>
+                        <p class="item-price">$89.99</p>
+                        <div class="d-flex align-items-center quantity-controls">
+                        <button class="qty-btn">−</button>
+                        <span class="qty-value mx-2">1</span>
+                        <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="item-total text-end">
+                        <p class="text-muted mb-0">Total:</p>
+                        <strong>$89.99</strong>
+                    </div>
+                    </div>
+
+                    <div class="cart-item d-flex align-items-center mb-4 p-3">
+                    <img src="./assets/images/unisex1.jpg" alt="Sneaker" class="cart-item-img me-3">
+                    <div class="flex-grow-1">
+                        <h5 class="item-name">Eclipse 360</h5>
+                        <p class="item-price">$94.99</p>
+                        <div class="d-flex align-items-center quantity-controls">
+                        <button class="qty-btn">−</button>
+                        <span class="qty-value mx-2">2</span>
+                        <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="item-total text-end">
+                        <p class="text-muted mb-0">Total:</p>
+                        <strong>$94.99</strong>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="col-lg-4">
+                    <div class="summary-card p-4">
+                    <h5 class="mb-3">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span>
+                        <span>$183.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Shipping</span>
+                        <span>$2.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4">
+                        <strong>Total</strong>
+                        <strong>$185.00</strong>
+                    </div>
+                    <button class="btn checkout-btn w-100">Proceed to Checkout</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- BOOTSTRAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: false     
+        });
+    </script>
+</body>
+</html>
