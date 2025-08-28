@@ -29,14 +29,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const positions = new Float32Array(pCount * 3);
   const speeds = new Float32Array(pCount);
   for (let i = 0; i < pCount; i++){
-    const i3 = i * 3;
-    positions[i3] = (Math.random() - 0.5) * 10;    
-    positions[i3 + 1] = (Math.random() - 0.5) * 6; 
-    positions[i3 + 1] = (Math.random() - 0.5) * 6; 
-    positions[i3 + 1] = (Math.random() - 0.5) * 6; 
-    positions[i3 + 2] = (Math.random() - 0.5) * 7;
-    speeds[i] = 0.0005 + Math.random() * 0.0012;   
+  const i3 = i * 3;
+  positions[i3]     = (Math.random() - 0.5) * 10;  // X
+  positions[i3 + 1] = (Math.random() - 0.5) * 6;   // Y
+  positions[i3 + 2] = (Math.random() - 0.5) * 7;   // Z
+  speeds[i] = 0.0005 + Math.random() * 0.0012;     // Speed
   }
+
   pGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
   pGeo.setAttribute('aSpeed', new THREE.BufferAttribute(speeds, 1));
   const pMat = new THREE.PointsMaterial({ size: 0.025, color: 0x9fdfff, transparent:true, opacity:0.65 });
@@ -92,3 +91,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
     camera.lookAt(0,0,0);
   }, 16);
 })();
+
+const toggler = document.querySelector('.navbar-toggler');
+const icon = document.querySelector('.navbar-toggler-icon');
+
+toggler.addEventListener('click', () => {
+    icon.classList.toggle('open');
+});
